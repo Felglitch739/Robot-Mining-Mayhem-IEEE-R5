@@ -1,0 +1,12 @@
+# Arduino build files
+*.bin
+*.hex
+*.elf
+
+# IDE folders
+.vscode/
+.idea/
+
+# OS junk
+.DS_Store
+Thumbs.db
