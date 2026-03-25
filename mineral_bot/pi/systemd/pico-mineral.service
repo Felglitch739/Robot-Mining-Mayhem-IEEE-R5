@@ -1,0 +1,17 @@
+[Unit]
+Description=Pico Mineral Collector Controller
+After=network.target
+
+[Service]
+Type=simple
+User=pi
+Group=pi
+WorkingDirectory=/home/pi/IEEE_R5
+ExecStart=/usr/bin/python3 /home/pi/IEEE_R5/raspberry_pi/pico_mineral_controller.py --port /dev/serial0 --baudrate 115200 --speed 170 --threshold 22.0
+Restart=always
+RestartSec=2
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
