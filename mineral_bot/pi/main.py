@@ -209,11 +209,16 @@ class MineralCollector:
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Best-case mineral collection controller for Pico")
-    parser.add_argument("--port", default="/dev/serial0", help="Serial device path (e.g. /dev/serial0, /dev/ttyUSB0)")
+    parser.add_argument("--port", default="/dev/ttyACM0", help="Serial device path (e.g. /dev/serial0, /dev/ttyUSB0)")
     parser.add_argument("--baudrate", type=int, default=115200, help="Serial baudrate")
     parser.add_argument("--speed", type=int, default=170, help="Motor speed (0-255)")
     parser.add_argument("--threshold", type=float, default=22.0, help="Obstacle threshold in cm")
     return parser.parse_args()
+    #parser.add_argument("--port", default="/dev/serial0", help="Serial device path (e.g. /dev/serial0, /dev/ttyUSB0)")
+    #parser.add_argument("--baudrate", type=int, default=115200, help="Serial baudrate")
+    #parser.add_argument("--speed", type=int, default=170, help="Motor speed (0-255)")
+    #parser.add_argument("--threshold", type=float, default=22.0, help="Obstacle threshold in cm")
+    #return parser.parse_args()
 
 
 def main() -> None:

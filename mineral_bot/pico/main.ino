@@ -4,7 +4,7 @@
 #include <Servo.h>
 #include <utility/imumaths.h>
 // final r5 code
-
+/*
 #if defined(ARDUINO_ARCH_RP2040)
 #define DEBUG_SERIAL Serial
 #define PI_SERIAL Serial1
@@ -16,6 +16,11 @@ const int PI_UART_RX_PIN = 1; // GP1 <- TX de Raspberry Pi 5
 #define DEBUG_SERIAL Serial
 #define PI_SERIAL Serial
 #endif
+*/
+
+// Comunicación por cable USB hacia la Raspberry Pi 5
+#define DEBUG_SERIAL Serial
+#define PI_SERIAL Serial
 
 // =========================
 // Servos
